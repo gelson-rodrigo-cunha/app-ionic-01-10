@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sistema de notícias</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor="let item of data">
+    <ion-card>
+
+      <ion-card-content>
+        <ion-card-title>
+          {{ item.titlePost }}
+          </ion-card-title>
+        <p>
+           <button ion-button color="secondary" (click)="postDetalhes(item)">
+                               Ver notícia
+                         </button>
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+  <ion-list>
+
+       <h3>Latitude: {{locationTracker.lat}}</h3>
+  <h3>Longitude: {{locationTracker.lng}}</h3>  
+    </ion-list>
+
+
+ <!-- <button ion-button full primary (click)="start()">Minha localização</button>-->
+    <!-- final código para mapa -->
+</ion-content>
